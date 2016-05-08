@@ -11,5 +11,6 @@
     <?echo $new_res['news']?>
 </p>
 <?endforeach;?>
+    <a href="add.php">добавить новость</a>
 </body>
 </html>

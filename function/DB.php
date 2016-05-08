@@ -13,12 +13,18 @@ class DB
         mysql_select_db($this->db);
     }
 
-    public function sql_query($sql){
+    public function sql_query($sql)
+    {
         $res = mysql_query($sql);
         $arr = array();
         while($row = mysql_fetch_assoc($res)){
             $arr[] = $row;
         }
         return $arr;
+    }
+    public function sql_exec($sql)
+    {
+        $res = mysql_query($sql);
+        var_dump($res);
     }
 }
