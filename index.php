@@ -1,4 +1,4 @@
 <?
-require __DIR__ . "/mode/news.php";
-$res = get_news();
+require_once __DIR__ . "/models/News.php";
+$items = News::getAll();
 include __DIR__ . "/view/index.php";

@@ -1,5 +1,5 @@
 <?
-require __DIR__ . "/../mode/news.php";
+require __DIR__ . "/../models/News.php";
 if (!empty($_POST)){
     $data = array();
     if (!empty($_POST["title"])){

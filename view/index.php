@@ -5,10 +5,10 @@
     <title>Document</title>
 </head>
 <body>
-    <?foreach ($res as $new_res):?>
-<h1><?echo $new_res['title']?></h1>
+    <?foreach ($items as $item):?>
+<h1><?echo $item->title?></h1>
 <p>
-    <?echo $new_res['news']?>
+    <?echo $item->news?>
 </p>
 <?endforeach;?>
     <a href="add.php">добавить новость</a>

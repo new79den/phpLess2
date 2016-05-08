@@ -1,27 +1,27 @@
 <?
+require_once __DIR__ . "/config.php";
 
-class DB
+class DB extends config
 {
-    private $host = "localhost";
-    private $pass = "";
-    private $user = "root";
-    private $db = "news";
-
     function __construct()
     {
         mysql_connect($this->host, $this->user, $this->pass);
         mysql_select_db($this->db);
     }
 
-    public function sql_query($sql)
+    public function query($sql, $class = 'stdClass')
     {
         $res = mysql_query($sql);
+        if ($res == false) {
+            return false;
+        }
         $arr = array();
-        while($row = mysql_fetch_assoc($res)){
+        while ($row = mysql_fetch_object($res, $class)) {
             $arr[] = $row;
         }
         return $arr;
     }
+
     public function sql_exec($sql)
     {
         $res = mysql_query($sql);
