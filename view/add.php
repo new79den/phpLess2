@@ -12,6 +12,6 @@
     <textarea name="text" id="text" cols="30" rows="10"></textarea>
     <input type="submit" value="добавить">
 </form>
-<a href="index.php">главная</a>
+<a href="news/all.php">главная</a>
 </body>
 </html>

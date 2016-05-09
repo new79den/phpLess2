@@ -5,12 +5,12 @@
     <title>Document</title>
 </head>
 <body>
-    <?foreach ($items as $item):?>
+
 <h1><?echo $item->title?></h1>
 <p>
     <?echo $item->news?>
 </p>
-<?endforeach;?>
-    <a href="add.php">добавить новость</a>
+
+    <a href="../add.php">добавить новость</a>
 </body>
 </html>

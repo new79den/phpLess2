@@ -10,7 +10,12 @@ class News
    public static function getAll()
     {
         $news = new DB();
-        return $news->query("SELECT * FROM t_news", "News");
+        return $news->queryAll("SELECT * FROM t_news", "News");
+    }
+
+    public static function getOne($id){
+        $news = new DB();
+        return $news->queryOne("SELECT * FROM t_news WHERE id =". $id, "News");
     }
 
     function put_news($data)

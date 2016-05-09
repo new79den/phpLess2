@@ -9,7 +9,7 @@ class DB extends config
         mysql_select_db($this->db);
     }
 
-    public function query($sql, $class = 'stdClass')
+    public function queryAll($sql, $class = 'stdClass')
     {
         $res = mysql_query($sql);
         if ($res == false) {
@@ -20,6 +20,11 @@ class DB extends config
             $arr[] = $row;
         }
         return $arr;
+    }
+    public function queryOne($sql, $class = 'stdClass'){
+        $res = $this->queryAll($sql, $class);
+        return $res[0];
+
     }
 
     public function sql_exec($sql)
