@@ -11,6 +11,6 @@
     <?echo $item->news?>
 </p>
 <?endforeach;?>
-    <a href="../add.php">добавить новость</a>
+    <a href="../addNews.php">добавить новость</a>
 </body>
 </html>

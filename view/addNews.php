@@ -5,7 +5,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="add.php" method="post">
+<form action="addNews.php" method="post">
     <label for="title">заголовок</label>
     <input type="text" name="title" id ="title"><br><br>
     <label for="text">Текст</label>
