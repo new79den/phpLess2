@@ -6,9 +6,9 @@
 </head>
 <body>
 
-<h1><?echo $item->title?></h1>
+<h1><?echo $items->title?></h1>
 <p>
-    <?echo $item->news?>
+    <?echo $items->news?>
 </p>
 
     <a href="../addNews.php">добавить новость</a>

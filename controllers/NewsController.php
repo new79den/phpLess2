@@ -7,7 +7,7 @@ class NewsController
     {
         $news = News::getAll();
         $view = new View();
-        $view->assign('items', $news);
+        $view->items = $news;
         $view->display("news/all.php");
 
     }
@@ -17,7 +17,7 @@ class NewsController
         $id = $_GET['id'];
         $news = News::getOne($id);
         $view = new View();
-        $view->assign('items', $news);
+        $view->items = $news;
         $view->display("news/one.php");
      }
 }
