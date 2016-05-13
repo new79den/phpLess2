@@ -29,7 +29,6 @@ class DB extends config
 
     public function sql_exec($sql)
     {
-        $res = mysql_query($sql);
-        var_dump($res);
+        mysql_query($sql);
     }
 }

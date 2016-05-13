@@ -6,11 +6,12 @@
 </head>
 <body>
     <?foreach ($items as $item):?>
-<h1><?echo $item->title?></h1>
+        <a href="http://phpless2/News/<?echo $item->id?>"><h1><?echo $item->title?></h1></a>
 <p>
     <?echo $item->news?>
 </p>
 <?endforeach;?>
-    <a href="../addNews.php">добавить новость</a>
+    <a href="http://phpless2/AddNews">добавить новость</a>
+
 </body>
 </html>

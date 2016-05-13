@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteRule ^/ ?ctrl=News&act=All
+RewriteRule ^News/([0-9]+) ?ctrl=News&act=One&id=$1
+RewriteRule ^AddNews ?ctrl=News&act=Add
