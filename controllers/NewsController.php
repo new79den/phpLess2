@@ -5,10 +5,14 @@ class NewsController
 
     public function actionAll()
     {
-        $news = News::getAll();
+       $db = new DB();
+       $res =  $db->query("SELECT * FROM t_news");
+       var_dump($res);
+        die;
+       /* $news = News::getAll();
         $view = new View();
-        $view->items = $news;
-        $view->display("news/all.php");
+        $view- >items = $news;
+        $view->display("news/all.php");*/
     }
 
     public function actionOne()
