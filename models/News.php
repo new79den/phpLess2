@@ -1,5 +1,5 @@
 <?
-require_once __DIR__ . "/../classes/DB.php";
+/*require_once __DIR__ . "/../classes/DB.php";
 require_once __DIR__ . "/../classes/AbstractModel.php";
 
 class News extends AbstractModel
@@ -44,5 +44,5 @@ class News extends AbstractModel
         $news = new DB();
         $news->sql_exec($sql);
     }
-}
+}*/
 

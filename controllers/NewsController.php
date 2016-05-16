@@ -5,30 +5,37 @@ class NewsController
 
     public function actionAll()
     {
-       $db = new DB();
-       $res =  $db->query("SELECT * FROM t_news");
-       var_dump($res);
-        die;
-       /* $news = News::getAll();
+        $news = NewsModel::findAll();
         $view = new View();
-        $view- >items = $news;
-        $view->display("news/all.php");*/
+        $view->items = $news;
+        $view->display("news/all.php");
     }
 
     public function actionOne()
     {
         $id = $_GET['id'];
-        $news = News::getOne($id);
+
+        $news = NewsModel::findOne($id);
         $view = new View();
         $view->items = $news;
         $view->display("news/one.php");
+
+        /*$id = $_GET['id'];
+        $news = News::getOne($id);
+        $view = new View();
+        $view->items = $news;
+        $view->display("news/one.php");*/
     }
 
     public function actionAdd()
     {
-        News::addNews();
+        $article = new NewsModel();
+        $article->title = "привет";
+        $article->news = "111111111";
+        $article->insert();
+        /*News::addNews();
         $view = new View();
-        $view->display("addNews.php");
+        $view->display("addNews.php");*/
     }
 
     public function actionDel(){
