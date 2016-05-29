@@ -9,22 +9,24 @@ class NewsController
         $view = new View();
         $view->items = $news;
         $view->display("news/all.php");
+
+        /*$news = NewsModel::findOneByColumn('title','xcvxcv');
+        $news->title = "Новій ййййййййййййй";
+        $news->news = "199999999998888888888888899999999999999999999";
+        $news->save();
+        var_dump($news->id);*/
+
+
     }
 
     public function actionOne()
     {
         $id = $_GET['id'];
-
         $news = NewsModel::findOne($id);
         $view = new View();
         $view->items = $news;
         $view->display("news/one.php");
 
-        /*$id = $_GET['id'];
-        $news = News::getOne($id);
-        $view = new View();
-        $view->items = $news;
-        $view->display("news/one.php");*/
     }
 
     public function actionAdd()

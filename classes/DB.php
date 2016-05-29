@@ -24,6 +24,8 @@ class DB extends config
     {
         $sth = $this->dbh->prepare($sql);
         $sth->execute($params);
-        
+    }
+    public function lastInsertId(){
+        return $this->dbh->lastInsertId();
     }
 }
