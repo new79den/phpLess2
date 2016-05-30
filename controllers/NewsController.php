@@ -10,12 +10,15 @@ class NewsController
         $view->items = $news;
         $view->display("news/all.php");
 
-        /*$news = NewsModel::findOneByColumn('title','xcvxcv');
-        $news->title = "Новій ййййййййййййй";
-        $news->news = "199999999998888888888888899999999999999999999";
-        $news->save();
-        var_dump($news->id);*/
-
+        /*try {
+            $news = NewsModel::findOneByColumn('title', 'xcvxcv');
+            $news->title = "Новій ййййййййййййй";
+            $news->news = "199999999998888888888888899999999999999999999";
+            $news->save();
+            var_dump($news->id);
+        } catch (ModelException $e){
+            die('что-то пошло не так');
+        }*/
 
     }
 
@@ -34,7 +37,7 @@ class NewsController
         $article = new NewsModel();
         $article->title = "привет";
         $article->news = "111111111";
-        $article->insert();
+        $article->save();
         /*News::addNews();
         $view = new View();
         $view->display("addNews.php");*/
